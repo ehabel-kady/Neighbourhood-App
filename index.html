@@ -8,10 +8,10 @@
     <body>
         <div class="contain">
             <div id="container">
-                <input id="filter" type="text">
-                <input type="button" value="Filter">
+                <input id="filter" type="text" data-bind="value: searchTerm, text: searchTerm">
+                <input type="button" value="Filter" data-bind="click: filtration">
                 <ul data-bind="foreach: locations">
-                    <li data-bind="text: title"></li>
+                    <li data-bind="text: title, click: $parent.viewlist"></li>
                 </ul>
             </div>
 
