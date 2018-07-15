@@ -40,7 +40,7 @@ function viewModel()
         {
             for(var j = 0; j < places.length; j++)
             {
-                if(places[i].name.toLocaleLowerCase().includes(this.searchTerm()))
+                if(places[j].name.toLocaleLowerCase().includes(this.searchTerm()))
                 {
                     self.positions.push(places[j]);
                 }
