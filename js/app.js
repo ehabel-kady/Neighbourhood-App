@@ -30,6 +30,7 @@ function viewModel()
         self.positions([]);
         if(this.searchTerm() === "")
         {
+            console.log(places[i]);
             for(var i = 0; i < places.length; i++)
             {
                 self.positions.push(places[i]);
@@ -93,7 +94,8 @@ function viewModel()
     {
         for(var i =0; i < self.markers.length; i++)
         {
-            if(self.marker[i].name == selected.name)
+            console.log(self.markers[i].name)
+            if(self.markers[i].name == selected.name)
             {
                 this.markerFromList = self.markers[i];
             }
